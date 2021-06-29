@@ -1,9 +1,12 @@
 .display {
-    font-size: 3em; 
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold 700;
+    font-size: 5em; 
     text-align: end;
     background-color: gray;
     color: white;
-    border-radius: 0.25rem;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
 }
 
 .buttons {
@@ -12,7 +15,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     background-color: darkblue;
-    border-radius: 0.25rem;
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
 
 }
 
@@ -26,6 +30,11 @@ button {
     margin: 0.25rem;
     width: 70%;
     /* border: none; */
+}
+
+button:hover, button:focus {
+    background-color: darkgrey;
+    color: white;
 }
 
 .equals {
