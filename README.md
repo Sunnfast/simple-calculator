@@ -4,7 +4,7 @@
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [Functionality](#functionality)
   - [Screenshot](#screenshot)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -24,13 +24,13 @@ The basic design for this calculator was originally inspired by the calculator I
 However, I found that the colors were a bit too dull for my tastes and based my palatte off of the color teal instead. The 'branding' of the design was based on Tolkien's The Lord of the Rings universe.
 
 
-### The challenge
+### Functionality
 
 Users should be able to:
 
-- add, subtract, divide, and multiply pairs of numbers
-- receive an error message if they attempt to divide by zero
-- use negative numbers and decimals (in progress!)
+- Add, subtract, divide, and multiply pairs of numbers
+- Receive an error message if they attempt to divide by zero
+- Use negative numbers and decimals (in progress!)
 
 ### Screenshot
 
