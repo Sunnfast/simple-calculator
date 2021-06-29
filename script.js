@@ -193,32 +193,75 @@ document.getElementById('0').addEventListener("click", function() {
     return prevNum
 });
 
+// 
+// OPERATORS
+// 
 
 //sum button
 document.getElementById('plus').addEventListener('click', function () {
-    a = prevNum //saves current display to variable 'a'
-    prevNum = '';
-    displayDigits = 0;
-    currentNum = 0;
-    display.innerText = 0;
+if (typeof(b) === 'number') {
+    operate()
+}
 
-    a = Number(a)
+    if (typeof(a) === 'number') {
+        b = prevNum;
+        prevNum = '';
+        displayDigits = 0;
+        currentNum = 0;
+        display.innerText = 0;
 
-    opId = "plus"
+        b = Number(b)
+        opId = "plus"
+
+        operate()
+
+        a = Number(final);
+
+    } else if (typeof(a) === "undefined") {
+        a = prevNum //saves current display to variable 'a'
+        prevNum = '';
+        displayDigits = 0;
+        currentNum = 0;
+        display.innerText = 0;
+
+        a = Number(a)
+        opId = "plus"
+        
+    }
+    
     
 });
 
 //minus button
 document.getElementById('subtract').addEventListener('click', function () {
-    a = prevNum //saves current display to variable 'a'
-    prevNum = '';
-    displayDigits = 0;
-    currentNum = 0;
-    display.innerText = 0;
+if (typeof(b) === 'number') {
+    operate()
+}    
+    if (typeof(a) === 'number') {
+        b = prevNum;
+        prevNum = '';
+        displayDigits = 0;
+        currentNum = 0;
+        display.innerText = 0;
 
-    a = Number(a)
+        b = Number(b)
+        opId = "minus"
+        
+        operate()
 
-    opId = "minus"
+        a = Number(final);
+
+    } else if (typeof(a) === 'undefined'){
+        a = prevNum //saves current display to variable 'a'
+        prevNum = '';
+        displayDigits = 0;
+        currentNum = 0;
+        display.innerText = 0;
+
+        a = Number(a)
+        opId = "minus"
+    }
+    
     
 });
 
@@ -253,10 +296,15 @@ document.getElementById('divide').addEventListener('click', function () {
 
 // EQUALS
 document.getElementById('result').addEventListener('click', function() {
-    b = prevNum;
-    b = Number(b)
+   
     
-    operate()
+        b = prevNum;
+        b = Number(b)
+        
+        operate()    
+    
+    
+    
 
     // final = prevNum
 
@@ -270,12 +318,15 @@ document.getElementById('result').addEventListener('click', function() {
     prevNum = '';
     displayDigits = 0;
     currentNum = 0;
+    opId = '';
+    final = 0;
+    a = 0;
+    b= 0;
  });
 
 
 //  REMAINING
 
-// FIX LEADING ZERO BUG
 
 //  Users should be able to string together several operations and get the right answer, with each pair of numbers being evaluated at a time.
 //   For example, 12 + 7 - 5 * 3 = should yield 42. An example of the behavior we’re looking for would be this student solution. 
