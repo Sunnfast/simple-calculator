@@ -11,18 +11,20 @@ body {
     background-color: teal;
     border-radius: 1rem;
     border: 2px solid black;
+    padding-bottom: 1rem;
 
 }
 
 body img {
     width: 10%;
     height: auto;
+    padding-top: 0.5rem;
    
 }
 
 .brand-name {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.75em;
 }
 
 .display {
@@ -35,6 +37,7 @@ body img {
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
     border: 3px solid black;
+    margin: 1rem;
 }
 
 .buttons {
