@@ -13,11 +13,11 @@
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     background-color: darkblue;
     border-radius: 0.25rem;
-    
-    
+
 }
 
 button {
+    font-size: 1em;
     background-color: white;
     color: darkblue;
     font-weight: bold;

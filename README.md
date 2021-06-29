@@ -1,2 +1,2 @@
 # simple-calculator
-JavaScript Calculator assignment for The Odin Project
+JavaScript Calculator assignment for The Odin Project.

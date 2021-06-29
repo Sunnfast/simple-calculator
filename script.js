@@ -58,7 +58,7 @@ document.getElementById('8').addEventListener("click", function() {
     return prevNum
 });
 
-
+// CLEAR BUTTON
  document.getElementById('AC').addEventListener("click", function() {
     display.innerText = 0;
     prevNum = 0;
