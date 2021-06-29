@@ -3,10 +3,16 @@
 function operate() {
 
 if (opId == 'plus')  {
-    add (a, b)
+    add(a, b)
     
 } else if (opId == 'minus') {
     subtract(a, b)
+
+} else if (opId == 'multiply') {
+    multiply(a, b)
+
+} else if (opId == 'divide') {
+    divide(a, b)
 }
 
 function add(a, b) {
@@ -20,11 +26,19 @@ function add(a, b) {
     }
 
     function multiply(a, b) {
-        return (a * b)
+        final = a * b
+        display.innerText = final;
     }
 
     function divide(a, b) {
-        return (a / b)
+        if (b == 0) {
+        final = 'Nope!'
+        display.innerText = final;
+        } else {
+        final = a / b
+        display.innerText = final;    
+        }
+        
     }
 }
    
@@ -192,12 +206,57 @@ document.getElementById('plus').addEventListener('click', function () {
     
 });
 
+//minus button
+document.getElementById('subtract').addEventListener('click', function () {
+    a = prevNum //saves current display to variable 'a'
+    prevNum = 0;
+    displayDigits = 0;
+    currentNum = 0;
+    display.innerText = 0;
+
+    a = Number(a)
+
+    opId = "minus"
+    
+});
+
+// multiply button
+document.getElementById('times').addEventListener('click', function () {
+    a = prevNum //saves current display to variable 'a'
+    prevNum = 0;
+    displayDigits = 0;
+    currentNum = 0;
+    display.innerText = 0;
+
+    a = Number(a)
+
+    opId = "multiply"
+    
+});
+
+// divide button
+document.getElementById('divide').addEventListener('click', function () {
+    a = prevNum //saves current display to variable 'a'
+    prevNum = 0;
+    displayDigits = 0;
+    currentNum = 0;
+    display.innerText = 0;
+
+    a = Number(a)
+
+    opId = "divide"
+    
+});
+
+
 // EQUALS
 document.getElementById('result').addEventListener('click', function() {
     b = prevNum;
     b = Number(b)
     
     operate()
+
+    // final = prevNum
 
 });
 
