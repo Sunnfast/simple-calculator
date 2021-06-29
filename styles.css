@@ -1,0 +1,43 @@
+.display {
+    font-size: 3em; 
+    text-align: end;
+    background-color: gray;
+    color: white;
+    border-radius: 0.25rem;
+}
+
+.buttons {
+    display: grid;
+    font-size: 2em;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    background-color: darkblue;
+    border-radius: 0.25rem;
+    
+    
+}
+
+button {
+    background-color: white;
+    color: darkblue;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    padding: 0.3rem;
+    margin: 0.25rem;
+    width: 70%;
+    /* border: none; */
+}
+
+.equals {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: darkgoldenrod;
+    width: 90%;
+    color: white;
+}
+
+.clear {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    width: 90%;
+}
