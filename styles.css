@@ -1,3 +1,28 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold 700;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 1rem;
+}
+
+.calculator {
+    background-color: teal;
+
+}
+
+body img {
+    width: 10%;
+    height: auto;
+   
+}
+
+.brand-name {
+    text-align: center;
+    font-size: 2em;
+}
+
 .display {
     font-family: 'Roboto Mono', monospace;
     font-weight: bold 700;
@@ -7,6 +32,7 @@
     color: white;
     border-top-left-radius: 0.25rem;
     border-top-right-radius: 0.25rem;
+    border: 3px solid black;
 }
 
 .buttons {
@@ -14,17 +40,20 @@
     font-size: 2em;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    background-color: darkblue;
+    background-color: teal;
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
 
 }
 
 button {
-    font-size: 1em;
-    background-color: white;
-    color: darkblue;
+    font-family: 'Roboto Mono', monospace; 
     font-weight: bold;
+    font-size: 1em;
+
+    background-color: rgb(196, 192, 192);
+    color: black;
+   
     border-radius: 0.5rem;
     padding: 0.3rem;
     margin: 0.25rem;
@@ -40,7 +69,7 @@ button:hover, button:focus {
 .equals {
     grid-column-start: 3;
     grid-column-end: 5;
-    background-color: darkgoldenrod;
+    background-color: #f0c15d;
     width: 90%;
     color: white;
 }
@@ -49,4 +78,10 @@ button:hover, button:focus {
     grid-column-start: 1;
     grid-column-end: 3;
     width: 90%;
+    background-color: #b62731;
+}
+
+.operator {
+    background-color: #5e3f80;
+    color: white;
 }
