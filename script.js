@@ -60,7 +60,7 @@ document.getElementById('7').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -73,7 +73,7 @@ document.getElementById('8').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -87,7 +87,7 @@ document.getElementById('9').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -101,7 +101,7 @@ document.getElementById('4').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -115,7 +115,7 @@ document.getElementById('5').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -129,7 +129,7 @@ document.getElementById('6').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -143,7 +143,7 @@ document.getElementById('1').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -157,7 +157,7 @@ document.getElementById('2').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -171,7 +171,7 @@ document.getElementById('3').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -185,7 +185,7 @@ document.getElementById('0').addEventListener("click", function() {
 
     // sets a value for previous number under the hood if first number inputted
     if (typeof(prevNum) === "undefined") {
-        return prevNum = 0
+        return prevNum = ''
     }   
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
@@ -197,7 +197,7 @@ document.getElementById('0').addEventListener("click", function() {
 //sum button
 document.getElementById('plus').addEventListener('click', function () {
     a = prevNum //saves current display to variable 'a'
-    prevNum = 0;
+    prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
@@ -211,7 +211,7 @@ document.getElementById('plus').addEventListener('click', function () {
 //minus button
 document.getElementById('subtract').addEventListener('click', function () {
     a = prevNum //saves current display to variable 'a'
-    prevNum = 0;
+    prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
@@ -225,7 +225,7 @@ document.getElementById('subtract').addEventListener('click', function () {
 // multiply button
 document.getElementById('times').addEventListener('click', function () {
     a = prevNum //saves current display to variable 'a'
-    prevNum = 0;
+    prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
@@ -239,7 +239,7 @@ document.getElementById('times').addEventListener('click', function () {
 // divide button
 document.getElementById('divide').addEventListener('click', function () {
     a = prevNum //saves current display to variable 'a'
-    prevNum = 0;
+    prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
@@ -267,7 +267,7 @@ document.getElementById('result').addEventListener('click', function() {
 // CLEAR BUTTON
  document.getElementById('AC').addEventListener("click", function() {
     display.innerText = 0;
-    prevNum = 0;
+    prevNum = '';
     displayDigits = 0;
     currentNum = 0;
  });
