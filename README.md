@@ -53,7 +53,9 @@ As of June 30, 2021.
 
 ### What I learned
 
-I found that my light background in video game programming had some strong influence in my ability to juggle multiple variables. This juggling act had proven to be invaluable while I was developing the main features of this project (namely: left to right calculation). When I re-framed the project as using variables like set 'flags', a few things came together more easily. For example, when designing the decimal button I needed to be able to disable the decimal button until the user began inputting a second number. In order to achieve this I set a specific variable just to track whether a decimal point was already on the screen or not `decCheck`. 
+I found that my light background in video game programming had some strong influence in my ability to juggle multiple variables. This juggling act had proven to be invaluable while I was developing the main features of this project (namely: left to right calculation). When I re-framed the project as using variables like set 'flags', a few things came together more easily. 
+
+For example, when designing the decimal button I needed to be able to disable the decimal button until the user began inputting a second number. In order to achieve this I set a specific variable just to track whether a decimal point was already on the screen or not `decCheck`. 
 
 ```
 // DECIMAL BUTTON
@@ -82,6 +84,45 @@ document.getElementById('decimal').addEventListener('click', function() {
 });
 ```
 I also utilized a similar use of variables for my different operator functions.
+
+```
+// divide button
+document.getElementById('divide').addEventListener('click', function () {
+// check to see if a is set
+
+// if a is set
+if (typeof(a) === 'number') {
+    b = prevNum; // if a already exists set the previous number as b
+    prevNum = ''; // reset prevNum
+    displayDigits = 0; // reset display to 0??
+    currentNum = 0; // reset currentNum to 0
+    display.innerText = 0;
+
+    b = Number(b) // ensures b is a number 
+ 
+// if a is NOT set
+} else if (typeof(a) === "undefined") {
+    a = prevNum //saves current display to variable 'a'
+    prevNum = '';
+    displayDigits = 0;
+    currentNum = 0;
+    display.innerText = 0;
+
+    a = Number(a) // ensures a is a number
+    opId = "divide" // assigns an operation id
+    decCheck = 'off'
+}
+
+// if b is set
+if (typeof(b) === 'number') {
+    operate() // operates with prior set operation ID
+    opId = 'divide' // sets current operation ID
+    a = Number(final); // re-sets a as the final result after operation
+    decCheck = 'off'
+}
+
+});
+```
 
 ### Continued development
 
