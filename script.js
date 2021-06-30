@@ -388,22 +388,15 @@ document.getElementById('result').addEventListener('click', function() {
 
     displayDigits = 0;
     currentNum = 0;
-    opId = '';
+    // opId = '';
     final = 0;
 
-    a = 0;
+    a = undefined;
     b = 0;
  });
 
 
 //  REMAINING
-
-
-//  Users should be able to string together several operations and get the right answer, with each pair of numbers being evaluated at a time.
-//   For example, 12 + 7 - 5 * 3 = should yield 42. An example of the behavior we’re looking for would be this student solution. 
-//   Your calculator should not evaluate more than a single pair of numbers at a time. 
-//   If you enter a number then an operator and another number that calculation should be displayed if your next input is an operator. 
-//   The result of the calculation should be used as the first number in your new calculation.
 
 //  You should round answers with long decimals so that they don’t overflow the screen.
 
