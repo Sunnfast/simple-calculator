@@ -279,11 +279,6 @@ if (typeof(a) === 'number') {
     display.innerText = 0;
 
     b = Number(b) // ensures b is a number 
-    // opId = "plus" // assigns an operation id
-
-    // operate()
-
-    
 
 // if a is NOT set
 } else if (typeof(a) === "undefined") {
@@ -295,6 +290,7 @@ if (typeof(a) === 'number') {
 
     a = Number(a) // ensures a is a number
     opId = "minus" // assigns an operation id
+    decCheck = 'off'
     
 }
 
@@ -303,6 +299,7 @@ if (typeof(b) === 'number') {
     operate() // operates with prior set operation ID
     opId = 'minus' // sets current operation ID
     a = Number(final); // re-sets a as the final result after operation
+    decCheck = 'off'
 }
 
 });
@@ -320,11 +317,6 @@ if (typeof(a) === 'number') {
     display.innerText = 0;
 
     b = Number(b) // ensures b is a number 
-    // opId = "plus" // assigns an operation id
-
-    // operate()
-
-    
 
 // if a is NOT set
 } else if (typeof(a) === "undefined") {
@@ -336,7 +328,7 @@ if (typeof(a) === 'number') {
 
     a = Number(a) // ensures a is a number
     opId = "multiply" // assigns an operation id
-    
+    decCheck = 'off'
 }
 
 // if b is set
@@ -344,6 +336,7 @@ if (typeof(b) === 'number') {
     operate() // operates with prior set operation ID
     opId = 'multiply' // sets current operation ID
     a = Number(final); // re-sets a as the final result after operation
+    decCheck = 'off'
 }
 
 });
@@ -361,9 +354,7 @@ if (typeof(a) === 'number') {
     display.innerText = 0;
 
     b = Number(b) // ensures b is a number 
-    
-    
-
+ 
 // if a is NOT set
 } else if (typeof(a) === "undefined") {
     a = prevNum //saves current display to variable 'a'
@@ -374,7 +365,7 @@ if (typeof(a) === 'number') {
 
     a = Number(a) // ensures a is a number
     opId = "divide" // assigns an operation id
-    
+    decCheck = 'off'
 }
 
 // if b is set
@@ -382,6 +373,7 @@ if (typeof(b) === 'number') {
     operate() // operates with prior set operation ID
     opId = 'divide' // sets current operation ID
     a = Number(final); // re-sets a as the final result after operation
+    decCheck = 'off'
 }
 
 });
