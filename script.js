@@ -1,5 +1,20 @@
-function roundToTwo(num) {    
-    return +(Math.round(num + "e+2")  + "e-2");
+function roundToTwo(final) {    
+    final = +(Math.round(final + "e+2")  + "e-2");
+    return final
+}
+
+function checkLength(num) {
+    stringFinal = num.toString();
+    length = stringFinal.length
+
+    if (length > 8) {
+        final = "Error."
+        return final
+
+    } else if (length <= 8) {
+        return final
+    }
+    
 }
     
 function operate() {
@@ -19,11 +34,15 @@ if (opId == 'plus')  {
 
 function add(a, b) {
     final = a + b;
+    final = roundToTwo(final);
+    checkLength(final);
+
     display.innerText = final; 
     }
 
     function subtract(a, b) {
     final = a - b;
+    
     display.innerText = final; 
     }
 
@@ -394,7 +413,7 @@ document.getElementById('result').addEventListener('click', function() {
     final = 0;
 
     a = undefined;
-    b = 0;
+    b = undefined;
  });
 
 
