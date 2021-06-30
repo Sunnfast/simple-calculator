@@ -30,11 +30,12 @@ Users should be able to:
 
 - Add, subtract, divide, and multiply pairs of numbers
 - Receive an error message if they attempt to divide by zero
-- Use negative numbers and decimals (in progress!)
+- Use negative numbers and decimals
+- Utilize left to right calculation like a physical calculator would allow (i.e. 12 + 7 - 5 * 3 = 42)
 
 ### Screenshot
 
-As of June 28, 2021.
+As of June 30, 2021.
 
 ![Screenshot of Virtual Calculator](/images/calculator-preview.png)
 
@@ -52,19 +53,44 @@ As of June 28, 2021.
 
 ### What I learned
 
-[WIP]
+I found that my light background in video game programming had some strong influence in my ability to juggle multiple variables. This juggling act had proven to be invaluable while I was developing the main features of this project (namely: left to right calculation). When I re-framed the project as using variables like set 'flags', a few things came together more easily. For example, when designing the decimal button I needed to be able to disable the decimal button until the user began inputting a second number. In order to achieve this I set a specific variable just to track whether a decimal point was already on the screen or not `decCheck`. 
 
-code snippet here
+```
+// DECIMAL BUTTON
+document.getElementById('decimal').addEventListener('click', function() {
+    
+    // check if decimal has already been used on current input
+    if (decCheck == 'on') {
+        document.getElementById('decimal').removeEventListener // disables decimal button if decimal already present
+        return
+    } else {
+        currentNum = '.';
+        decCheck = 'on';
+    }
+
+    // sets a value for previous number under the hood if first number inputted
+    if (typeof(prevNum) === "undefined") {
+        return prevNum = ''
+    }   
+    
+    displayDigits = prevNum + currentNum
+    display.innerText = displayDigits
+    prevNum = displayDigits //saves the current display as a variable
+    return prevNum
+
+    
+});
+```
+I also utilized a similar use of variables for my different operator functions.
 
 ### Continued development
 
-In the future, I would like to develop...
-
+In the future, I would like to add keyboard functionality (regular keys and number pad) to make computation easier and faster.
 
 
 ### Useful resources
 
-- [The Odin Project Assignment Prompt](#), provided a general overview of what I should prioritize first in my development and common bugs to be wary of.
+- [The Odin Project Assignment Prompt](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/calculator), provided a general overview of what I should prioritize first in my development and common bugs to be wary of. It also provided extra features that I could add to challenge myself (decimal, backspace, etc).
 
 
 ## Author

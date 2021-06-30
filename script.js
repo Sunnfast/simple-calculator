@@ -473,9 +473,4 @@ document.getElementById('negative').addEventListener("click", function() {
 //  window.addEventListener('keydown', function(e) {
 //     console.log(e.keyCode)
 //  });
-//  REMAINING
 
-
-//  EXTRA CREDIT: Add a “backspace” button, so the user can undo if they click the wrong number.
-
-//  EXTRA CREDIT: Add keyboard support! (SEE WES BOS DRUMKIT TUTORIAL AGAIN)
