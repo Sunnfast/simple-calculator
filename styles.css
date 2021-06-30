@@ -87,6 +87,12 @@ button:hover, button:focus {
     background-color: #b62731;
 }
 
+
+.spacer {
+    grid-row-start: 1;
+    grid-column: 3 / 5;
+}
+
 .operator {
     background-color: #5e3f80;
     color: white;

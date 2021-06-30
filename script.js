@@ -422,6 +422,17 @@ document.getElementById('decimal').addEventListener('click', function() {
     
 });
 
+
+// NEGATIVE BUTTON
+document.getElementById('negative').addEventListener("click", function() {
+   
+    displayDigits = -(displayDigits)
+    display.innerText = displayDigits
+    prevNum = displayDigits //saves the current display as a variable
+    return prevNum
+
+});
+
 // CLEAR BUTTON
  document.getElementById('AC').addEventListener("click", function() {
     display.innerText = 0;
@@ -429,7 +440,6 @@ document.getElementById('decimal').addEventListener('click', function() {
 
     displayDigits = 0;
     currentNum = 0;
-    // opId = '';
     final = 0;
 
     a = undefined;
@@ -439,16 +449,33 @@ document.getElementById('decimal').addEventListener('click', function() {
  });
 
 
+
+
+
+ //test script for keydown
+
+
+//  document.addEventListener('keydown', function(e) {
+//      if (e.key === 1) {
+//         currentNum = '1'
+
+//         // sets a value for previous number under the hood if first number inputted
+//         if (typeof(prevNum) === "undefined") {
+//             return prevNum = ''
+//         }   
+//         displayDigits = prevNum + currentNum
+//         display.innerText = displayDigits
+//         prevNum = displayDigits //saves the current display as a variable
+//         return prevNum
+//      }
+//  });
+
+//  window.addEventListener('keydown', function(e) {
+//     console.log(e.keyCode)
+//  });
 //  REMAINING
 
-
-//  EXTRA CREDIT: Users can get floating point numbers if they do the math required to get one, but they can’t type them in yet. 
-// Add a . button and let users input decimals! Make sure you don’t let them type more than one though: 12.3.56.5. 
-// It is hard to do math on these numbers. (disable the decimal button if there’s already one in the display)
-
-//  EXTRA CREDIT: Make it look nice! This can be a good portfolio project… but not if it’s UGLY. 
-// At least make the operations a different color from the keypad buttons.
-
+// add a negative button??
 //  EXTRA CREDIT: Add a “backspace” button, so the user can undo if they click the wrong number.
 
 //  EXTRA CREDIT: Add keyboard support! (SEE WES BOS DRUMKIT TUTORIAL AGAIN)

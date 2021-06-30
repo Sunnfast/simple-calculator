@@ -27,9 +27,14 @@
                 </div>
 
             <div class="buttons">
-                <button id = '7'>7</button>
-                <button id = '8'>8</button>
-                <button id = '9'>9</button>
+                <button
+                class = "clear"
+                id = 'AC'>AC</button>
+
+                <button id = '7' class = 'first-row'>7</button>
+                <button id = '8' class = 'first-row'>8</button>
+                <button id = '9' class = 'first-row'>9</button>
+                <div class="spacer"></div>
 
                 <button class = 'operator'
                 id = 'divide'>÷</button>
@@ -48,17 +53,14 @@
                 <button class = 'operator' 
                 id = 'subtract'>-</button>
 
-                <button id = '0'>0</button>
+                <button id = '0' class = 'zero'>0</button>
                 <button id = 'decimal'>.</button>
                 <button id = 'negative'>(-)</button>
 
                 <button class = 'operator'
                 id = 'plus'>+</button>
 
-                <button
-                class = "clear"
-                id = 'AC'>AC</button>
-
+                
                 <button id = 'result'
                 class = "equals">=</button>
                 
@@ -71,6 +73,11 @@
 
         </div>
     </div>
+    <footer>
+        <p>
+        Created by <a href = 'https://github.com/Sunnfast'>Simone Christen</a>. 2021.
+        </p>
+    </footer>
 </body>
 <script src = "script.js"></script>
 </html>
