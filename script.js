@@ -1,4 +1,6 @@
-    
+function roundToTwo(num) {    
+    return +(Math.round(num + "e+2")  + "e-2");
+}
     
 function operate() {
 
@@ -193,70 +195,187 @@ document.getElementById('0').addEventListener("click", function() {
     return prevNum
 });
 
+// 
+// OPERATORS
+// 
 
 //sum button
 document.getElementById('plus').addEventListener('click', function () {
-    a = prevNum //saves current display to variable 'a'
-    prevNum = '';
-    displayDigits = 0;
-    currentNum = 0;
-    display.innerText = 0;
 
-    a = Number(a)
+// check to see if a is set
 
-    opId = "plus"
+// if a is set
+    if (typeof(a) === 'number') {
+        b = prevNum; // if a already exists set the previous number as b
+        prevNum = ''; // reset prevNum
+        displayDigits = 0; // reset display to 0??
+        currentNum = 0; // reset currentNum to 0
+        display.innerText = 0;
+
+        b = Number(b) // ensures b is a number 
+        // opId = "plus" // assigns an operation id
+
+        // operate()
+
+        
+
+// if a is NOT set
+    } else if (typeof(a) === "undefined") {
+        a = prevNum //saves current display to variable 'a'
+        prevNum = '';
+        displayDigits = 0;
+        currentNum = 0;
+        display.innerText = 0;
+
+        a = Number(a) // ensures a is a number
+        opId = "plus" // assigns an operation id
+        
+    }
+
+    // if b is set
+    if (typeof(b) === 'number') {
+        operate() // operates with prior set operation ID
+        opId = 'plus' // sets current operation ID
+        a = Number(final); // re-sets a as the final result after operation
+    }
     
 });
 
 //minus button
 document.getElementById('subtract').addEventListener('click', function () {
+// check to see if a is set
+
+// if a is set
+if (typeof(a) === 'number') {
+    b = prevNum; // if a already exists set the previous number as b
+    prevNum = ''; // reset prevNum
+    displayDigits = 0; // reset display to 0??
+    currentNum = 0; // reset currentNum to 0
+    display.innerText = 0;
+
+    b = Number(b) // ensures b is a number 
+    // opId = "plus" // assigns an operation id
+
+    // operate()
+
+    
+
+// if a is NOT set
+} else if (typeof(a) === "undefined") {
     a = prevNum //saves current display to variable 'a'
     prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
 
-    a = Number(a)
-
-    opId = "minus"
+    a = Number(a) // ensures a is a number
+    opId = "minus" // assigns an operation id
     
+}
+
+// if b is set
+if (typeof(b) === 'number') {
+    operate() // operates with prior set operation ID
+    opId = 'minus' // sets current operation ID
+    a = Number(final); // re-sets a as the final result after operation
+}
+
 });
 
 // multiply button
 document.getElementById('times').addEventListener('click', function () {
+// check to see if a is set
+
+// if a is set
+if (typeof(a) === 'number') {
+    b = prevNum; // if a already exists set the previous number as b
+    prevNum = ''; // reset prevNum
+    displayDigits = 0; // reset display to 0??
+    currentNum = 0; // reset currentNum to 0
+    display.innerText = 0;
+
+    b = Number(b) // ensures b is a number 
+    // opId = "plus" // assigns an operation id
+
+    // operate()
+
+    
+
+// if a is NOT set
+} else if (typeof(a) === "undefined") {
     a = prevNum //saves current display to variable 'a'
     prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
 
-    a = Number(a)
-
-    opId = "multiply"
+    a = Number(a) // ensures a is a number
+    opId = "multiply" // assigns an operation id
     
+}
+
+// if b is set
+if (typeof(b) === 'number') {
+    operate() // operates with prior set operation ID
+    opId = 'multiply' // sets current operation ID
+    a = Number(final); // re-sets a as the final result after operation
+}
+
 });
 
 // divide button
 document.getElementById('divide').addEventListener('click', function () {
+// check to see if a is set
+
+// if a is set
+if (typeof(a) === 'number') {
+    b = prevNum; // if a already exists set the previous number as b
+    prevNum = ''; // reset prevNum
+    displayDigits = 0; // reset display to 0??
+    currentNum = 0; // reset currentNum to 0
+    display.innerText = 0;
+
+    b = Number(b) // ensures b is a number 
+    // opId = "plus" // assigns an operation id
+
+    // operate()
+
+    
+
+// if a is NOT set
+} else if (typeof(a) === "undefined") {
     a = prevNum //saves current display to variable 'a'
     prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
 
-    a = Number(a)
-
-    opId = "divide"
+    a = Number(a) // ensures a is a number
+    opId = "divide" // assigns an operation id
     
+}
+
+// if b is set
+if (typeof(b) === 'number') {
+    operate() // operates with prior set operation ID
+    opId = 'divide' // sets current operation ID
+    a = Number(final); // re-sets a as the final result after operation
+}
+
 });
 
 
 // EQUALS
 document.getElementById('result').addEventListener('click', function() {
-    b = prevNum;
-    b = Number(b)
+   
     
-    operate()
+        b = prevNum;
+        b = Number(b)
+        
+        operate()    
+    
+    
+    
 
     // final = prevNum
 
@@ -268,20 +387,18 @@ document.getElementById('result').addEventListener('click', function() {
  document.getElementById('AC').addEventListener("click", function() {
     display.innerText = 0;
     prevNum = '';
+
     displayDigits = 0;
     currentNum = 0;
+    // opId = '';
+    final = 0;
+
+    a = undefined;
+    b = 0;
  });
 
 
 //  REMAINING
-
-// FIX LEADING ZERO BUG
-
-//  Users should be able to string together several operations and get the right answer, with each pair of numbers being evaluated at a time.
-//   For example, 12 + 7 - 5 * 3 = should yield 42. An example of the behavior we’re looking for would be this student solution. 
-//   Your calculator should not evaluate more than a single pair of numbers at a time. 
-//   If you enter a number then an operator and another number that calculation should be displayed if your next input is an operator. 
-//   The result of the calculation should be used as the first number in your new calculation.
 
 //  You should round answers with long decimals so that they don’t overflow the screen.
 
