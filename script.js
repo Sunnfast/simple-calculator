@@ -42,12 +42,17 @@ function add(a, b) {
 
     function subtract(a, b) {
     final = a - b;
-    
+    final = roundToTwo(final);
+    checkLength(final);
+
     display.innerText = final; 
     }
 
     function multiply(a, b) {
         final = a * b
+        final = roundToTwo(final);
+        checkLength(final);
+
         display.innerText = final;
     }
 
@@ -55,8 +60,12 @@ function add(a, b) {
         if (b == 0) {
         final = 'Nope!'
         display.innerText = final;
+        
         } else {
         final = a / b
+        final = roundToTwo(final);
+        checkLength(final);
+
         display.innerText = final;    
         }
         
