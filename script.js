@@ -199,24 +199,25 @@ document.getElementById('0').addEventListener("click", function() {
 
 //sum button
 document.getElementById('plus').addEventListener('click', function () {
-if (typeof(b) === 'number') {
-    operate()
-}
 
+// check to see if a is set
+
+// if a is set
     if (typeof(a) === 'number') {
-        b = prevNum;
-        prevNum = '';
-        displayDigits = 0;
-        currentNum = 0;
+        b = prevNum; // if a already exists set the previous number as b
+        prevNum = ''; // reset prevNum
+        displayDigits = 0; // reset display to 0??
+        currentNum = 0; // reset currentNum to 0
         display.innerText = 0;
 
-        b = Number(b)
-        opId = "plus"
+        b = Number(b) // ensures b is a number 
+        // opId = "plus" // assigns an operation id
 
-        operate()
+        // operate()
 
-        a = Number(final);
+        
 
+// if a is NOT set
     } else if (typeof(a) === "undefined") {
         a = prevNum //saves current display to variable 'a'
         prevNum = '';
@@ -224,73 +225,141 @@ if (typeof(b) === 'number') {
         currentNum = 0;
         display.innerText = 0;
 
-        a = Number(a)
-        opId = "plus"
+        a = Number(a) // ensures a is a number
+        opId = "plus" // assigns an operation id
         
     }
-    
+
+    // if b is set
+    if (typeof(b) === 'number') {
+        operate() // operates with prior set operation ID
+        opId = 'plus' // sets current operation ID
+        a = Number(final); // re-sets a as the final result after operation
+    }
     
 });
 
 //minus button
 document.getElementById('subtract').addEventListener('click', function () {
+// check to see if a is set
+
+// if a is set
+if (typeof(a) === 'number') {
+    b = prevNum; // if a already exists set the previous number as b
+    prevNum = ''; // reset prevNum
+    displayDigits = 0; // reset display to 0??
+    currentNum = 0; // reset currentNum to 0
+    display.innerText = 0;
+
+    b = Number(b) // ensures b is a number 
+    // opId = "plus" // assigns an operation id
+
+    // operate()
+
+    
+
+// if a is NOT set
+} else if (typeof(a) === "undefined") {
+    a = prevNum //saves current display to variable 'a'
+    prevNum = '';
+    displayDigits = 0;
+    currentNum = 0;
+    display.innerText = 0;
+
+    a = Number(a) // ensures a is a number
+    opId = "minus" // assigns an operation id
+    
+}
+
+// if b is set
 if (typeof(b) === 'number') {
-    operate()
-}    
-    if (typeof(a) === 'number') {
-        b = prevNum;
-        prevNum = '';
-        displayDigits = 0;
-        currentNum = 0;
-        display.innerText = 0;
+    operate() // operates with prior set operation ID
+    opId = 'minus' // sets current operation ID
+    a = Number(final); // re-sets a as the final result after operation
+}
 
-        b = Number(b)
-        opId = "minus"
-        
-        operate()
-
-        a = Number(final);
-
-    } else if (typeof(a) === 'undefined'){
-        a = prevNum //saves current display to variable 'a'
-        prevNum = '';
-        displayDigits = 0;
-        currentNum = 0;
-        display.innerText = 0;
-
-        a = Number(a)
-        opId = "minus"
-    }
-    
-    
 });
 
 // multiply button
 document.getElementById('times').addEventListener('click', function () {
+// check to see if a is set
+
+// if a is set
+if (typeof(a) === 'number') {
+    b = prevNum; // if a already exists set the previous number as b
+    prevNum = ''; // reset prevNum
+    displayDigits = 0; // reset display to 0??
+    currentNum = 0; // reset currentNum to 0
+    display.innerText = 0;
+
+    b = Number(b) // ensures b is a number 
+    // opId = "plus" // assigns an operation id
+
+    // operate()
+
+    
+
+// if a is NOT set
+} else if (typeof(a) === "undefined") {
     a = prevNum //saves current display to variable 'a'
     prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
 
-    a = Number(a)
-
-    opId = "multiply"
+    a = Number(a) // ensures a is a number
+    opId = "multiply" // assigns an operation id
     
+}
+
+// if b is set
+if (typeof(b) === 'number') {
+    operate() // operates with prior set operation ID
+    opId = 'multiply' // sets current operation ID
+    a = Number(final); // re-sets a as the final result after operation
+}
+
 });
 
 // divide button
 document.getElementById('divide').addEventListener('click', function () {
+// check to see if a is set
+
+// if a is set
+if (typeof(a) === 'number') {
+    b = prevNum; // if a already exists set the previous number as b
+    prevNum = ''; // reset prevNum
+    displayDigits = 0; // reset display to 0??
+    currentNum = 0; // reset currentNum to 0
+    display.innerText = 0;
+
+    b = Number(b) // ensures b is a number 
+    // opId = "plus" // assigns an operation id
+
+    // operate()
+
+    
+
+// if a is NOT set
+} else if (typeof(a) === "undefined") {
     a = prevNum //saves current display to variable 'a'
     prevNum = '';
     displayDigits = 0;
     currentNum = 0;
     display.innerText = 0;
 
-    a = Number(a)
-
-    opId = "divide"
+    a = Number(a) // ensures a is a number
+    opId = "divide" // assigns an operation id
     
+}
+
+// if b is set
+if (typeof(b) === 'number') {
+    operate() // operates with prior set operation ID
+    opId = 'divide' // sets current operation ID
+    a = Number(final); // re-sets a as the final result after operation
+}
+
 });
 
 
@@ -316,12 +385,14 @@ document.getElementById('result').addEventListener('click', function() {
  document.getElementById('AC').addEventListener("click", function() {
     display.innerText = 0;
     prevNum = '';
+
     displayDigits = 0;
     currentNum = 0;
     opId = '';
     final = 0;
+
     a = 0;
-    b= 0;
+    b = 0;
  });
 
 
