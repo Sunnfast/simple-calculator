@@ -475,7 +475,7 @@ document.getElementById('negative').addEventListener("click", function() {
 //  });
 //  REMAINING
 
-// add a negative button??
+
 //  EXTRA CREDIT: Add a “backspace” button, so the user can undo if they click the wrong number.
 
 //  EXTRA CREDIT: Add keyboard support! (SEE WES BOS DRUMKIT TUTORIAL AGAIN)
