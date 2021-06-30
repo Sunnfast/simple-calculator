@@ -8,7 +8,7 @@ function checkLength(num) {
     length = stringFinal.length
 
     if (length > 8) {
-        final = "Error."
+        final = "Error"
         return final
 
     } else if (length <= 8) {
@@ -60,7 +60,7 @@ function add(a, b) {
         if (b == 0) {
         final = 'Nope!'
         display.innerText = final;
-        
+
         } else {
         final = a / b
         final = roundToTwo(final);
@@ -240,12 +240,7 @@ document.getElementById('plus').addEventListener('click', function () {
         currentNum = 0; // reset currentNum to 0
         display.innerText = 0;
 
-        b = Number(b) // ensures b is a number 
-        // opId = "plus" // assigns an operation id
-
-        // operate()
-
-        
+        b = Number(b) // ensures b is a number  
 
 // if a is NOT set
     } else if (typeof(a) === "undefined") {
@@ -257,6 +252,7 @@ document.getElementById('plus').addEventListener('click', function () {
 
         a = Number(a) // ensures a is a number
         opId = "plus" // assigns an operation id
+        decCheck = 'off'
         
     }
 
@@ -265,6 +261,7 @@ document.getElementById('plus').addEventListener('click', function () {
         operate() // operates with prior set operation ID
         opId = 'plus' // sets current operation ID
         a = Number(final); // re-sets a as the final result after operation
+        decCheck = 'off'
     }
     
 });
@@ -364,10 +361,7 @@ if (typeof(a) === 'number') {
     display.innerText = 0;
 
     b = Number(b) // ensures b is a number 
-    // opId = "plus" // assigns an operation id
-
-    // operate()
-
+    
     
 
 // if a is NOT set
@@ -395,21 +389,46 @@ if (typeof(b) === 'number') {
 
 // EQUALS
 document.getElementById('result').addEventListener('click', function() {
-   
-    
-        b = prevNum;
-        b = Number(b)
-        
-        operate()    
-    
-    
-    
 
-    // final = prevNum
+
+    b = prevNum;
+    b = Number(b)
+    
+    operate()    
+    decCheck = 'off'
+
+
+
+// final = prevNum
 
 });
 
+let decCheck
 
+// DECIMAL BUTTON
+document.getElementById('decimal').addEventListener('click', function() {
+    
+    // check if decimal has already been used on current input
+    if (decCheck == 'on') {
+        document.getElementById('decimal').removeEventListener // disables decimal button if decimal already present
+        return
+    } else {
+        currentNum = '.';
+        decCheck = 'on';
+    }
+
+    // sets a value for previous number under the hood if first number inputted
+    if (typeof(prevNum) === "undefined") {
+        return prevNum = ''
+    }   
+    
+    displayDigits = prevNum + currentNum
+    display.innerText = displayDigits
+    prevNum = displayDigits //saves the current display as a variable
+    return prevNum
+
+    
+});
 
 // CLEAR BUTTON
  document.getElementById('AC').addEventListener("click", function() {
@@ -423,12 +442,13 @@ document.getElementById('result').addEventListener('click', function() {
 
     a = undefined;
     b = undefined;
+
+    decCheck = 'off'
  });
 
 
 //  REMAINING
 
-//  You should round answers with long decimals so that they don’t overflow the screen.
 
 //  EXTRA CREDIT: Users can get floating point numbers if they do the math required to get one, but they can’t type them in yet. 
 // Add a . button and let users input decimals! Make sure you don’t let them type more than one though: 12.3.56.5. 
