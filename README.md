@@ -144,7 +144,7 @@ In the future, I would like to add keyboard functionality (regular keys and numb
 
 ## Acknowledgments
 
-[WIP]
+Thank you to The Odin Project discord group and [Erica](https://github.com/eching11) for helping me troubleshoot at various stages of the project.
 
 
 
