@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Screenshot
 
-As of June 30, 2021.
+As of July 11, 2021.
 
 ![Screenshot of Virtual Calculator](/images/calculator-preview.png)
 

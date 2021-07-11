@@ -97,3 +97,12 @@ button:hover, button:focus {
     background-color: #5e3f80;
     color: white;
 }
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover, footer a:focus {
+    color: #680b11;
+}
