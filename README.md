@@ -55,7 +55,7 @@ As of June 30, 2021.
 
 I found that my light background in video game programming had some strong influence in my ability to juggle multiple variables. This juggling act had proven to be invaluable while I was developing the main features of this project (namely: left to right calculation). When I re-framed the project as using variables like setting ['(event) flags'](https://askagamedev.tumblr.com/post/646646193546526720/what-are-flags-in-games), a few things came together more easily. 
 
-For example, when designing the decimal button I needed to be able to disable the decimal button until the user began inputting a second number. In order to achieve this I set a specific variable just to track whether a decimal point was already on the screen or not `decCheck`. 
+For example, when designing the decimal button I needed to be able to disable the decimal button until the user began inputting a second number. In order to achieve this I set a specific variable just to track whether a decimal point was already on the screen or not `decCheck`. I utilized this strategy again to fix a bug (where the equals button evaluated the expression before the second number was inputted) that had been plaguing the equals button.
 
 ```
 // DECIMAL BUTTON
