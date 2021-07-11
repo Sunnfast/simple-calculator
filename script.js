@@ -206,7 +206,13 @@ document.getElementById('3').addEventListener("click", function() {
     displayDigits = prevNum + currentNum
     display.innerText = displayDigits
     prevNum = displayDigits //saves the current display as a variable
-    return prevNum
+
+    if (typeof(a) === "undefined") {
+        twoNumCheck = "no";
+    } else {
+        twoNumCheck = "yes";
+    }
+    return prevNum, twoNumCheck;
 });
 
 
@@ -378,22 +384,20 @@ if (typeof(b) === 'number') {
 
 });
 
+// have the equals sign not work until two numbers are inputted
 
 // EQUALS
 document.getElementById('result').addEventListener('click', function() {
-
-
+   if (twoNumCheck === "no") {
+       return
+   } else {
     b = prevNum;
-    b = Number(b)
-    
-    operate()    
-    decCheck = 'off'
-
-
-
-// final = prevNum
-
+    b = Number(b);    
+    operate();    
+    decCheck = 'off';
+   }
 });
+
 
 let decCheck
 
